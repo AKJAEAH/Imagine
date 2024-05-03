@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url('foto.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+}
+
+.header {
+    background-color: rgb(147, 112, 219);
+    padding: 20px;
+    text-align: center;
+}
+
+.icon {
+    width: 50px; /* İkon genişliği */
+    position: absolute; /* Mutlak konumlandırma */
+    top: 20px; /* Üstten boşluk */
+    left: 20px; /* Soldan boşluk */
+    z-index: 1000; /* Üst üste gelme sırası */
+    cursor: pointer; /* İkona tıklanabilir olması için imleci el işareti yap */
+}
+
+.blur {
+    filter: blur(5px); /* Tüm sayfayı blurla */
+}
+
+.background-text {
+    display: inline-block;
+    background-color: rgb(147, 112, 219);
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    font-size: 25px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container a {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .image-container a {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .image-container a {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0; /* Sol kenara sabitle */
+    top: 0; /* Sayfanın en üstüne sabitle */
+    height: 100vh; /* Sayfanın tamamını kapla */
+    width: 300px; /* İstediğiniz genişlik */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+    overflow-y: auto; /* Eğer içerik pencere boyundan büyükse, kaydırma çubuğu ekle */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+}
+
+.show-popup {
+    display: block;
+}
+
+.close-button {
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #aaa;
+}
