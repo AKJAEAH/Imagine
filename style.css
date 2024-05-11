@@ -19,16 +19,16 @@ body {
 }
 
 .icon {
-    width: 50px; /* İkon genişliği */
-    position: absolute; /* Mutlak konumlandırma */
-    top: 20px; /* Üstten boşluk */
-    left: 20px; /* Soldan boşluk */
-    z-index: 1000; /* Üst üste gelme sırası */
-    cursor: pointer; /* İkona tıklanabilir olması için imleci el işareti yap */
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
 }
 
 .blur {
-    filter: blur(5px); /* Tüm sayfayı blurla */
+    filter: blur(5px);
 }
 
 .background-text {
@@ -78,17 +78,17 @@ img {
 .popup {
     display: none;
     position: fixed;
-    left: 0; /* Sol kenara sabitle */
-    top: 0; /* Sayfanın en üstüne sabitle */
-    height: 100vh; /* Sayfanın tamamını kapla */
-    width: 300px; /* İstediğiniz genişlik */
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 2000;
     transition: opacity 0.3s ease;
-    overflow-y: auto; /* Eğer içerik pencere boyundan büyükse, kaydırma çubuğu ekle */
+    overflow-y: auto;
 }
 
 .popup-content {
@@ -118,4 +118,16 @@ img {
 
 .close-button:hover {
     background-color: #aaa;
+}
+
+.video-container {
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+}
+
+.video-container video {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
